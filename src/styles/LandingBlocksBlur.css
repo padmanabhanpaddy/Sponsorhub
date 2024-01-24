@@ -1,0 +1,11 @@
+.LandingBlocksBlurRoot{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:30%;
+}
+
+.LandingBlocksBlurLogo > img{
+    width:15%;
+}

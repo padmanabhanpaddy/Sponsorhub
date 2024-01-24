@@ -1,0 +1,22 @@
+.EventCardRoot{
+    display:flex;
+    flex-direction: column;
+    width:20%;
+
+}
+
+.EventCardPoster{
+    width:100%;
+}
+
+
+.EventCardPoster > img{
+    width:100%;
+}
+
+.EventCardDetails{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left:2px;
+}

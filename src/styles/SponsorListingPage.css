@@ -1,0 +1,23 @@
+.SponsorListingPageMain{
+    display:flex;
+    flex-direction:row;
+}
+
+.SponsorListingPageLeft{
+    width:40%;
+}
+
+.SponsorListingPageRight{
+    width:60%;
+}
+
+.SponsorListingCardBox{
+    display:flex;
+    justify-content: flex-start;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+.SponsorListingCardBox > div{
+    margin:10px;
+}

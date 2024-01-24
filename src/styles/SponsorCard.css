@@ -1,0 +1,22 @@
+.SponsorCardRoot{
+    display:flex;
+    flex-direction: column;
+    width:20%;
+
+}
+
+.SponsorCardPoster{
+    width:100%;
+}
+
+
+.SponsorCardPoster > img{
+    width:100%;
+}
+
+.SponsorCardDetails{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left:2px;
+}

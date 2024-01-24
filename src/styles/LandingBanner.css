@@ -1,0 +1,45 @@
+.LandingBannerRoot{
+    display:flex;
+    flex-direction: row;
+}
+
+.LandingBannerLeft{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+}
+
+.LandingBackgroundRight{
+    background-image: url("../assets/landing-banner-background.png");
+    width:50%;
+}
+
+.LandingBannerRightImage{
+    width:50%;
+}
+
+.LandingBannerLeftBox{
+    width:80%;
+}
+
+.LandingBannerLeftButton{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    background-color:#1DA1F2 ;
+    margin:5px;
+    border-radius: 20px;
+
+}
+
+.LandingBannerLeftThirdRow{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    height:30%;
+    
+}

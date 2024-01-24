@@ -1,0 +1,23 @@
+.EventListingPageMain{
+    display:flex;
+    flex-direction:row;
+}
+
+.EventListingPageLeft{
+    width:40%;
+}
+
+.EventListingPageRight{
+    width:60%;
+}
+
+.EventListingCardBox{
+    display:flex;
+    justify-content: flex-start;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+.EventListingCardBox > div{
+    margin:10px;
+}

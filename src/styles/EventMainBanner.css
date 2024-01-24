@@ -1,0 +1,36 @@
+.EventMainBannerMain{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    
+}
+
+.EventBanner{
+    width:100%;
+}
+
+.EventMainBannerRoot{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SponsorNowButton{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color:#46C263;
+    margin:10px;
+    border-radius: 10px;
+}
+
+
+
+.EventMidInfoDetails > ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style-type: none;
+}

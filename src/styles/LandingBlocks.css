@@ -1,0 +1,20 @@
+.LandingBlockRoot{
+    display:flex;
+    flex-direction: row;
+    width:70%; 
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.LandingBlockLeft{
+    width:50%;
+}
+
+.LandingBlockRight{
+    width:50%;
+}
+
+.LandingBlockLeftBox{
+    display:flex;
+    flex-direction: column;
+}

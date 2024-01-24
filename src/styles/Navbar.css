@@ -1,0 +1,34 @@
+
+.NavbarRoot{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+
+.NavbarLogo{
+    margin:30px;
+    width:50%;
+}
+.NavbarLogoImageBox{
+    width:50%;
+}
+
+.NavbarLogoImageBox > img{
+    width:70%;
+}
+
+
+.NavbarLogo > img{
+    width:25%;
+}
+
+.NavbarOptions{
+    width:50%;
+}
+
+.NavbarOptions > ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+}

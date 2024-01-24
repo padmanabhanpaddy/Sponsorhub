@@ -1,0 +1,10 @@
+.SponsorApplyPageMain{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.SponsorApplyPageForm{
+    margin-top:25px;
+}

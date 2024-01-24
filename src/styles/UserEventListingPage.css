@@ -1,0 +1,5 @@
+.UserEventListingPageMain{
+    display:flex;
+    flex-direction: flex-start;
+    justify-content: space-evenly;
+}

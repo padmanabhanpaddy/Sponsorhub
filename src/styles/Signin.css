@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&family=Oswald:wght@300&family=Roboto:wght@300&family=Source+Code+Pro:wght@300&family=Teko:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500;700&family=Oswald:wght@300&family=Roboto:wght@300&family=Source+Code+Pro:wght@300&family=Teko:wght@300&display=swap');
+.outer-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+.signin{    
+    display: flex;
+    justify-content:space-evenly;
+    flex-direction: column;
+    margin-right: 508px;
+    margin-bottom: 40px;
+    margin-top: 48px;
+
+width: 120px;
+height: 44px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 44px;
+color: #000000;
+}
+#require{
+   color:red;
+}
+
+.email{    
+width: 67px;
+height: 24px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+color: #000000;
+} 
+
+#emailbox{    
+width: 620px;
+height: 42px;
+background: #d9d9d9;
+flex-wrap: wrap;
+display: flex;
+flex-direction: column;
+}
+
+.password{    
+    width: 110px;
+    height: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+#passwordbox{ 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 620px;
+    height: 42px;
+    background: #d9d9d9;
+}
+
+#checkbox{  
+    margin-right: 9px;
+    width: 20px;
+    height: 20px;
+    background: #d9d9d9;
+    border-radius: 7px;
+}
+
+.rem{    
+    width: 139px;
+    height: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    padding-bottom: 30px;
+}
+#sign {
+    
+    width: 179px;
+    height: 42px;
+    background: #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#in {
+    width: 78px;
+    height: 29px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+color: #FFFFFF;
+}
+
+#forgetpass{  
+    margin-left: 30px;
+    margin-bottom: 25px;  
+    width: 250px;
+    height: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+
+}
+.noacc{
+    margin-left: 27px;
+    margin-bottom: 25px;
+    width: 200px;
+    height: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+
+}
+
+.google{
+    width: 200px;
+    height: 54px;   
+}
+
+.emaildes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.passdes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 7px;
+}
+
+.remme{
+    margin-right: 453px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.imp{
+    margin-top: 47px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.google-signin{
+    width: 100%;
+}
+
+@media(max-width:855px){
+    .signin{
+        margin-left: 314px;
+    }
+    .remme{
+        margin-left: 314px;
+    }
+    .imp{
+        
+        align-items: center;
+        
+    }
+    #emailbox{
+        width: 300px;
+        
+    }
+    #passwordbox{
+        width: 300px;
+        
+    }
+    #forgetpass {
+        font-size: small;
+        align-items: center;
+        margin-left: 89px;
+    }
+    .google{
+        width:120px;
+        height: 10px;
+        margin-right: 205px;
+    }
+    .noacc{
+        font-size: small;
+        margin-left: 66px;
+    }
+    #img{
+        width: 200px;
+        margin-left: 66px;
+    }
+}
