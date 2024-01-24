@@ -1,3 +1,46 @@
+# Node.js
 node_modules/
 
+# Build output
+/build/
+/dist/
+
+# IDE files
+.vscode/
+
+# Log files
+*.log
+
+# Environment file
 .env
+
+# Dependency lock files
+package-lock.json
+
+# Ignore the local environment file
+.env.local
+
+# Ignore production environment file
+.env.production
+
+# Ignore any files generated during development
+.DS_Store
+
+# Ignore compiled output
+*.map
+*.min.js
+
+# Ignore coverage reports
+/coverage/
+
+# Ignore npm debugging logs
+npm-debug.log
+
+# Ignore yarn error logs
+yarn-error.log
+
+# Ignore Next.js build output
+.next/
+
+# Ignore React build output
+/build/
