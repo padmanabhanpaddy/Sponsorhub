@@ -24,8 +24,6 @@ export default function EventMainPage() {
           <h2>Event Sponsor Plans</h2>
           <SponsorPlans data={all_params}></SponsorPlans>
         
-
-
  
 
     </div>
