@@ -1,6 +1,9 @@
 # Node.js
 node_modules/
 
+#Server Folder
+server/
+
 # Build output
 /build/
 /dist/

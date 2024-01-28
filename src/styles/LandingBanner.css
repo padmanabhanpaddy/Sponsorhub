@@ -1,45 +1,58 @@
-.LandingBannerRoot{
-    display:flex;
-    flex-direction: row;
+.LandingBannerRoot {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
 }
 
-.LandingBannerLeft{
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-    width:50%;
+.LandingBannerLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
 }
 
-.LandingBackgroundRight{
-    background-image: url("../assets/landing-banner-background.png");
-    width:50%;
+.LandingBannerRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
 }
 
-.LandingBannerRightImage{
-    width:50%;
+.LandingBannerRightImage {
+  width: 50%;
+  z-index: 2;
+  margin-left: 20%;
+}
+.backgroundGlow {
+  position: absolute;
+  z-index: -1;
+  top: 30px;
+  left: 650px;
+  opacity: 0.8;
 }
 
-.LandingBannerLeftBox{
-    width:80%;
+.LandingBannerLeftBox {
+  width: 80%;
 }
 
-.LandingBannerLeftButton{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width:50%;
-    background-color:#1DA1F2 ;
-    margin:5px;
-    border-radius: 20px;
-
+.LandingBannerLeftButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aqua;
+  color: rgb(43, 43, 43);
+  width: 200px;
+  height: 50px;
+  border: 0;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 10px;
 }
 
-.LandingBannerLeftThirdRow{
-    display:flex;
-    flex-direction:row;
-    justify-content: space-evenly;
-    height:30%;
-    
+.LandingBannerLeftThirdRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 30%;
 }
