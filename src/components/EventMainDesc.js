@@ -8,33 +8,28 @@ export default function EventMainDesc(props) {
         <div className='EventMainInfo'>
             <table>
                 <tr>
-                    <td>Event Name</td>
+                    <th>Event Name</th>
                     <td>{props.data.name}</td>
                 </tr>
 
                 <tr>
-                    <td>Event Location</td>
+                    <th>Event Location</th>
                     <td>{props.data.address}</td>
                 </tr>
 
                 <tr>
-                    <td>Minumum Audience</td>
+                    <th>Minumum Audience</th>
                     <td>{props.data.min_audience}</td>
                 </tr>
 
                 <tr>
-                    <td>Maximum Audience</td>
+                    <th>Maximum Audience</th>
                     <td>{props.data.max_audience}</td>
                 </tr>
 
                 <tr>
-                    <td>Event Type</td>
+                    <th>Event Type</th>
                     <td>{props.data.type}</td>
-                </tr>
-
-                <tr>
-                    <td>Tenute</td>
-                    <td>3 days</td>
                 </tr>
             </table>
         </div>

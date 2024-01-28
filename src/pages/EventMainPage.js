@@ -5,6 +5,7 @@ import EventMainDesc from '../components/EventMainDesc';
 import SponsorPlans from '../components/SponsorPlans';
 import '../styles/EventMainPage.css';
 import {useParams} from 'react-router-dom'
+import MaxWidth from '../components/MaxWidth';
 
 export default function EventMainPage() {
 
@@ -19,7 +20,9 @@ export default function EventMainPage() {
           <EventMainBanner data={all_params} ></EventMainBanner>
 
           <h2>Event Details</h2>
+          <MaxWidth>
           <EventMainDesc data={all_params}></EventMainDesc>
+          </MaxWidth>
 
           <h2>Event Sponsor Plans</h2>
           <SponsorPlans data={all_params}></SponsorPlans>

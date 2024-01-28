@@ -1,36 +1,44 @@
-.EventMainBannerMain{
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-    
+.EventMainBannerMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.EventBanner{
-    width:100%;
+.EventBanner img{
+    aspect-ratio: 5/3;
+    object-fit: cover;
+  width: 50%;
 }
 
-.EventMainBannerRoot{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+.EventMainBannerRoot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.SponsorNowButton{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color:#46C263;
-    margin:10px;
-    border-radius: 10px;
+.SponsorNowButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #46c263;
+  margin: 10px;
+  border-radius: 10px;
+}
+.EventMidInfoTitle h3{
+    font-size: 60px;
+    margin: 0;
+    padding: 0;
+}
+.EventMidInfoDetails p{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
 }
 
-
-
-.EventMidInfoDetails > ul{
-    display:flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    list-style-type: none;
+.EventMidInfoDetails > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style-type: none;
 }
