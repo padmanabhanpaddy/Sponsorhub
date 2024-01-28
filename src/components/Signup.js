@@ -63,7 +63,12 @@ export default function Signup(props) {
   return (
     <>
       <div className="outer-container">
-        <div className="signup">Signup</div>
+        <div className="signup">
+          Create account as&nbsp;
+          <p className="dynamicTextSignin">
+            {props.is_user === true ? "User!" : "Sponsor!"}
+          </p>
+        </div>
         <div className="emaildes">
           <div className="email">Email *</div>
           {/* Signin Input */}
@@ -181,7 +186,10 @@ export default function Signup(props) {
             Forgotten your password?
           </Link>
           <div className="noacc">
-            No Account?<Link to="/sigin" className="signupLink">Sign up</Link>{" "}
+            No Account?
+            <Link to="/sigin" className="signupLink">
+              Sign up
+            </Link>{" "}
           </div>
           <div className="google">
             <input

@@ -7,20 +7,17 @@
   align-items: center;
 }
 .signup {
+  margin: 20px 0px;
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  margin-right: 508px;
-  margin-bottom: 40px;
-  margin-top: 48px;
-
-  width: 120px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 635px;
   height: 44px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
-  line-height: 44px;
   color: #000000;
 }
 #require {

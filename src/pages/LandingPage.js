@@ -17,8 +17,14 @@ export default function LandingPage() {
       </div>
 
       <div className="LandingBlocksBlurBox">
-        <LandingBlocksBlur cardTitle="Explore Events" cardDescription="Explore Some magnificient event!!!"/>
-        <LandingBlocksBlur cardTitle="Explore Sponsors" cardDescription="See some gigantic Sponsors ready to help and uplift your events"/>
+        <LandingBlocksBlur
+          cardTitle="Explore Events"
+          cardDescription="Explore Some magnificient event!!!"
+        />
+        <LandingBlocksBlur
+          cardTitle="Explore Sponsors"
+          cardDescription="See some gigantic Sponsors ready to help and uplift your events"
+        />
       </div>
     </div>
   );

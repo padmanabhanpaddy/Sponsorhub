@@ -4,6 +4,9 @@
   width: 300px;
   height: 400px;
   background-color: #d7d7d78a;
+  -webkit-box-shadow: 1px 2px 37px 8px #e1e1e1;
+  -moz-box-shadow: 1px 2px 37px 8px #e1e1e1;
+  box-shadow: 1px 2px 37px 8px #e1e1e1;
 }
 .EventCardRoot:hover {
   display: flex;

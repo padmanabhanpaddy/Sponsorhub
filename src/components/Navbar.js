@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { clearUser } from "../store/slices/UserSlice";
 import { clearSponsor } from "../store/slices/SponsorSlice";
+import { FaSignOutAlt } from "react-icons/fa";
 
 export default function Navbar() {
   // Load the user/sponsor email from redux state
@@ -67,7 +68,9 @@ export default function Navbar() {
               )}
 
               <Link className="Navoptions" to="/">
-                <li onClick={handleSignout}>Signout</li>
+                <li onClick={handleSignout}>
+                  <FaSignOutAlt />
+                </li>
               </Link>
             </ul>
           ) : (

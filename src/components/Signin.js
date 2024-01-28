@@ -49,9 +49,7 @@ export default function Signin(props) {
 
   return (
     <>
-      <div className="switchTabs">
-        <SwitchTabs />
-      </div>
+      
       <div className="outer-container">
         <div className="signin">
           Welcome back&nbsp;
