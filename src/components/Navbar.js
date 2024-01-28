@@ -38,44 +38,44 @@ export default function Navbar() {
           // When user or sponsor signed in show appropriate options
           user_email || sponsor_email ? (
             <ul>
-              <Link to="/">
+              <Link className="Navoptions" to="/">
                 <li>Home</li>
               </Link>
-              <Link to="/sponsors">
+              <Link className="Navoptions" to="/sponsors">
                 <li>Sponsors</li>
               </Link>
-              <Link to="/events">
+              <Link className="Navoptions" to="/events">
                 <li>Events</li>
               </Link>
 
               {/* For user show user_event and for sponsors show sponsor applied events */}
               {user_email && (
-                <Link to="/user_events">
+                <Link className="Navoptions" to="/user_events">
                   <li>Sponsor Status</li>
                 </Link>
               )}
               {user_email && (
-                <Link to="/event_post">
+                <Link className="Navoptions" to="/event_post">
                   <li>Post Event</li>
                 </Link>
               )}
 
               {sponsor_email && (
-                <Link to="/sponsor_events">
+                <Link className="Navoptions" to="/sponsor_events">
                   <li>Sponsor Status</li>
                 </Link>
               )}
 
-              <Link to="/">
+              <Link className="Navoptions" to="/">
                 <li onClick={handleSignout}>Signout</li>
               </Link>
             </ul>
           ) : (
             <ul>
-              <Link to="/">
+              <Link className="Navoptions" to="/">
                 <li>Home</li>
               </Link>
-              <Link to="/">
+              <Link className="Navoptions" to="/">
                 <li>Explore More</li>
               </Link>
               {/* <Link to="/sponsor_signin">

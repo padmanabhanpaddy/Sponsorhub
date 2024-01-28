@@ -38,3 +38,11 @@ ul a{
     padding: 10px;
     /* background-color: #1da0f25a; */
 }
+.Navoptions{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    :hover{
+      transition: ease-in 0.1s;
+      color: #1DA1F2;
+    }
+  }

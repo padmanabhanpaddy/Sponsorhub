@@ -20,16 +20,17 @@
 }
 
 .LandingBannerRightImage {
-  width: 50%;
+  width: 60%;
   z-index: 2;
   margin-left: 20%;
 }
 .backgroundGlow {
   position: absolute;
+  width: 800px;
   z-index: -1;
-  top: 30px;
-  left: 650px;
-  opacity: 0.8;
+  top: 25px;
+  left: 700px;
+  opacity: 0.7;
 }
 
 .LandingBannerLeftBox {

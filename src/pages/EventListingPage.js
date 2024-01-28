@@ -53,7 +53,7 @@ export default function EventListingPage() {
                     const imageUrl = encodeURIComponent(event.images[0].image);
 
                     return(
-                      <Link to={`/events/${event.id}/${event.name}/${event.type}/${event.address}/${event.min_audience}/${event.max_audience}/${event.start_date}/${event.end_date}/${event.start_time}/${event.end_time}/${event.description}/${imageUrl}`}>
+                      <Link className="EventsOptions" to={`/events/${event.id}/${event.name}/${event.type}/${event.address}/${event.min_audience}/${event.max_audience}/${event.start_date}/${event.end_date}/${event.start_time}/${event.end_time}/${event.description}/${imageUrl}`}>
                         <EventCard
                           id={event.id}
                           key={event.id}

@@ -5,6 +5,7 @@ import "../styles/LandingBanner.css";
 import { FaSignInAlt } from "react-icons/fa";
 import { FaPlusSquare } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import MaxWidth from "./MaxWidth";
 
 export default function LandingBanner() {
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ export default function LandingBanner() {
     navigate("/user_signup");
   };
   return (
+    <MaxWidth>
     <div className="LandingBannerRoot">
       {/* Right Banner */}
       <div className="LandingBannerLeft">
@@ -58,5 +60,6 @@ export default function LandingBanner() {
         <img src={mobile} className="LandingBannerRightImage"></img>
       </div>
     </div>
+    </MaxWidth>
   );
 }
