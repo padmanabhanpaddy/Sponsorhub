@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 
 export default function ApplyForm() {
 
-    // States to save the details
+    // States to save the details of events
     const [name, setName] = useState("");
     const [type, setType] = useState("");
     const [location, setLocation] = useState("");
@@ -18,6 +18,11 @@ export default function ApplyForm() {
     const [description, setDescription] = useState("");
     const [images, setImages] = useState();
     const [quotationfile, setQuotationfile] = useState([]);
+
+    // States to save the details of hhe sponsors
+    const [planName, setPlanName] = useState();
+    const [planSize, setSizeType] = useState();
+    const [planPrice, setPlanPrice] = useState();
 
     // Get the email of the user
     const email = useSelector(state => state.users.user_email)
@@ -51,6 +56,15 @@ export default function ApplyForm() {
         .catch((err) =>{console.log(err)});
 
 
+    }
+
+
+    // States to handel the number of plans
+    const [nplans, setNplans] = useState(0);
+
+    const createPlanHandler = () =>{
+        // Increment the number of plans
+        setNplans(nplans + 1);
     }
 
 
@@ -127,6 +141,43 @@ export default function ApplyForm() {
             </tr>
         </table>
         
+
+        <button onClick={createPlanHandler}> Creat a plan</button>
+
+           
+        {/* Render additional input fields */}
+        {(() => {
+                    const fields = [];
+                    for (let i = 0; i < nplans; i++) {
+                        fields.push(
+                            // Name of the plan
+                            <table key={i}>
+
+                                <h2>Plan: {i+1}</h2>
+                                <tr>
+                                    <td>Plan Name: </td>
+                                    <td><input type="text" /></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Banner Size: </td>
+                                    <td><input type="text" /></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Banner Price: </td>
+                                    <td><input type="number" /></td>
+                                </tr>
+                                
+                            </table>
+
+                            
+                        );
+                    }
+                    return fields;
+                })()}
+
+
     </div>
   )
 }

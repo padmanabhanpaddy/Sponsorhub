@@ -1,9 +1,31 @@
-import React from 'react'
+import {React, useEffect, useState }from 'react'
 import SponsorFundButton from '../components/SponsorFundButton';
 import '../styles/SponsorPlans.css';
 import {useSelector} from "react-redux";
 
 export default function SponsorPlans(props) {
+
+    const [plans, setPlans] = useState([]);
+
+    useEffect(() => {
+        if (typeof props.data.plans === 'string') {
+           
+            const decodedPlansString = decodeURIComponent(props.data.plans);    
+            
+            const decodedPlans = JSON.parse(decodedPlansString);
+            console.log("Decoded Plans:", decodedPlans);
+
+            setPlans(decodedPlans);
+           
+            
+        }
+    }, [props.data.plans]);
+    
+
+
+
+
+
 
 // Load the user/sponsor email from redux state
   const sponsor_email = useSelector((state) => state.sponsors.sponsor_email);
@@ -13,42 +35,29 @@ export default function SponsorPlans(props) {
 
         <div className='SponsorPlansInfo'>
 
-            <table>
-                <tr>
-                    <th>Plan Name</th>
-                    <th>Print Size</th>
-                    <th>Print Price</th>
-                    {sponsor_email&&<th>Fund Events</th>}
-                </tr>
-
-                <tr>
-                    <td>Platinum</td>
-                    <td>Banner Print</td>
-                    <td>10,00,000</td>
-                    {sponsor_email&&<td><SponsorFundButton amount={10000} event_id={props.data.id} /></td>}
-                </tr>
-
-                <tr>
-                    <td>Gold</td>
-                    <td>A2</td>
-                    <td>1,00,000</td>
-                    {sponsor_email&&<td><SponsorFundButton /></td>}
-                </tr>
-
-                <tr>
-                    <td>Silver</td>
-                    <td>A3</td>
-                    <td>10,000</td>
-                    {sponsor_email&&<td><SponsorFundButton /></td>}
-                </tr>
-
-                <tr>
-                    <td>Bronze</td>
-                    <td>A4</td>
-                    <td>5000</td>
-                    {sponsor_email&&<td><SponsorFundButton /></td>}
-                </tr>
-            </table>
+        <table>
+                    <thead>
+                        <tr>
+                            <th>Plan Name</th>
+                            <th>Print Size</th>
+                            <th>Print Price</th>
+                            {sponsor_email && <th>Fund Events</th>}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {plans.map(plan => (
+                            <tr key={plan.plan_name}>
+                                <td>{plan.plan_name}</td>
+                                <td>{plan.print_size}</td>
+                                <td>{plan.print_price}</td>
+                                {sponsor_email && (
+                                    <td><SponsorFundButton amount={plan.print_price} event_id={plan.event_id} /></td>
+                                )}
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+                
 
         </div>
     </div>

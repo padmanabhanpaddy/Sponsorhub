@@ -29,6 +29,8 @@ export default function EventListingPage() {
 
   useEffect(() => {console.log(eventsData)}, [eventsData])
 
+
+
   return (
     <div className='EventListingPageRoot'>
 
@@ -52,8 +54,13 @@ export default function EventListingPage() {
                     // Encode the image url
                     const imageUrl = encodeURIComponent(event.images[0].image);
 
+                    // Ecnode the plans array
+                    const plans = encodeURIComponent(JSON.stringify(event.plans));
+
+                    console.log(plans);
+
                     return(
-                      <Link to={`/events/${event.id}/${event.name}/${event.type}/${event.address}/${event.min_audience}/${event.max_audience}/${event.start_date}/${event.end_date}/${event.start_time}/${event.end_time}/${event.description}/${imageUrl}`}>
+                      <Link to={`/events/${event.id}/${event.name}/${event.type}/${event.address}/${event.min_audience}/${event.max_audience}/${event.start_date}/${event.end_date}/${event.start_time}/${event.end_time}/${event.description}/${imageUrl}/${plans}`}>
                         <EventCard
                           id={event.id}
                           key={event.id}
@@ -68,6 +75,7 @@ export default function EventListingPage() {
                           end_time={event.end_time}
                           description={event.description}
                           images={event.images}
+                          plans={event.plans}
                         ></EventCard>
                       </Link>
                   )})}

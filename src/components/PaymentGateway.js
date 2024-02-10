@@ -20,7 +20,7 @@ export default async function PaymentGateway(paymentInfo) {
       
 
     // Create an order and get the order info
-    const data = await axios.post("http://localhost:8000/app/create_order/", {"amount":12000})
+    const data = await axios.post("http://localhost:8000/app/create_order/", {"amount":paymentInfo.totalCostInPaisa})
 
     console.log(data); // The response data from the server will be logged here
 

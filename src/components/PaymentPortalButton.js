@@ -4,6 +4,8 @@ import PaymentGateway from './PaymentGateway'
 
 export default function PaymentPortalButton(props) {
 
+    const { data } = props;
+
     // A function which loads the payment gateway script to the page
     function loadScript(src) {
       return new Promise((resolve) => {
@@ -39,8 +41,8 @@ export default function PaymentPortalButton(props) {
 
     // total cost will be toggled using props supiled to this button
     const paymentInfo = {
-        "totalCostInPaisa":props.data.amount * 100,
-        "sponsorship_id":props.data.id
+        "totalCostInPaisa":data.amount * 100,
+        "sponsorship_id":data.id_x
     }
 
   return (

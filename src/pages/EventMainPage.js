@@ -11,6 +11,11 @@ export default function EventMainPage() {
   // Get all the params from the url
   const all_params = useParams();
 
+  const plans = all_params.plans;
+
+  console.log(plans)
+
+
   return (
     <div className='EventMainPageRoot'>
         {/* Navbar */}
