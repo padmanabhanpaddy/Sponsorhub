@@ -14,6 +14,7 @@ export default function EventListingPage() {
 
 
   useEffect(() => {
+    document.title = 'SponsorsHub - Events';
     // Make an api request
     axios.get("http://localhost:8000/app/events/")
     .then(res => {
