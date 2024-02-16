@@ -1,29 +1,27 @@
-import React from 'react'
+import React from "react";
 import brand_logo from "../assets/brand_logo.jpg";
-import '../styles/SponsorCard.css';
+import "../styles/SponsorCard.css";
 
 export default function SponsorCard(props) {
   return (
-    <div className='SponsorCardRoot'>
-    {/* Upper Big Div For Brand Poster */}
-    <div className='SponsorCardPoster'>
+    <div className="SponsorCardRoot">
+      {/* Upper Big Div For Brand Poster */}
+      <div className="SponsorCardPoster">
         <img src={props.profile_image}></img>
-    </div>
+      </div>
 
-
-    {/* Lower Medium Div For Text Detials */}
-    <div className='SponsorCardDetails'>
+      {/* Lower Medium Div For Text Detials */}
+      <div className="SponsorCardDetails">
         {/* Include title, type */}
 
-        <div className='SponsorcardDetailsBlock'>
-            <p>Brand: {props.name}</p>
+        <div className="SponsorcardDetailsBlock">
+          <p><b>Brand:</b> {props.name}</p>
         </div>
 
-        <div className='SponsorcardDetailsTypeBlock'>
-            <p>Type: {props.type}</p>
+        <div className="SponsorcardDetailsTypeBlock">
+          <p><b>Type:</b> {props.type}</p>
         </div>
-        
+      </div>
     </div>
-</div>
-  )
+  );
 }

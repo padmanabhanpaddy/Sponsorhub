@@ -3,3 +3,9 @@
     justify-content: center;
     align-items: center;
 }
+.SponsorPlansInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}

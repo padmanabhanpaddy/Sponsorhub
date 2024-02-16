@@ -4,11 +4,12 @@
 }
 
 .EventListingPageLeft{
-    width:40%;
+    width:20%;
+    margin-right: 30px;
 }
 
 .EventListingPageRight{
-    width:60%;
+    width:80%;
 }
 
 .EventListingCardBox{
@@ -18,6 +19,36 @@
     flex-wrap: wrap;
 }
 
-.EventListingCardBox > div{
-    margin:10px;
+.EventListingCardBox{
+    margin:0px;
 }
+.EventsOptions{
+    width: 300px;
+  height: 400px;
+  margin: 20px;
+    color: black;
+    text-decoration: none;
+}
+.EventsOptions:hover{
+    text-decoration: none;
+}
+#sign {
+    width: 179px;
+    height: 42px;
+    background: #000000;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  #sign:hover {
+    width: 179px;
+    height: 42px;
+    background: #1da1f2;
+    color: #000;
+    cursor: pointer;
+    border: 0;
+    font-weight: 600;
+    -webkit-box-shadow: 1px 2px 37px 8px #1da1f2;
+    -moz-box-shadow: 1px 2px 37px 8px #1da1f2;
+    box-shadow: 1px 2px 37px 8px #1da1f2;
+    transition: ease-in 0.15s;
+  }

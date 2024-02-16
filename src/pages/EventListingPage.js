@@ -14,6 +14,7 @@ export default function EventListingPage() {
 
 
   useEffect(() => {
+    document.title = 'SponsorsHub - Events';
     // Make an api request
     axios.get("http://localhost:8000/app/events/")
     .then(res => {
@@ -60,7 +61,8 @@ export default function EventListingPage() {
                     console.log(plans);
 
                     return(
-                      <Link to={`/events/${event.id}/${event.name}/${event.type}/${event.address}/${event.min_audience}/${event.max_audience}/${event.start_date}/${event.end_date}/${event.start_time}/${event.end_time}/${event.description}/${imageUrl}/${plans}`}>
+                      // <Link to={`/events/${event.id}/${event.name}/${event.type}/${event.address}/${event.min_audience}/${event.max_audience}/${event.start_date}/${event.end_date}/${event.start_time}/${event.end_time}/${event.description}/${imageUrl}/${plans}`}>
+                      <Link className="EventsOptions" to={`/events/${event.id}/${event.name}/${event.type}/${event.address}/${event.min_audience}/${event.max_audience}/${event.start_date}/${event.end_date}/${event.start_time}/${event.end_time}/${event.description}/${imageUrl}`}>
                         <EventCard
                           id={event.id}
                           key={event.id}

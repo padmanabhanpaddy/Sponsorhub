@@ -2,6 +2,15 @@
     display:flex;
     flex-direction: column;
 }
+.SearchBarUpper{
+    margin: 0;
+    padding: 0;
+}
+.SearchBarUpper > h2{
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+}
 
 .SearchBarLower{
     display:flex;
@@ -19,10 +28,21 @@
 
 .SearchBarInput{
     width:100%;
+    height: 40px;
 }
 
 .SearchBarInput > input{
-    width:100%;
+    font-size: 20px;
+    width:100%;    
+    height: 40px;
 }
-
+.SearchBarButton{
+    width:35%;    
+    height: 45px;
+}
+.SearchBarButton > input{
+    cursor: pointer;
+    width:100%;    
+    height: 45px;
+}
 

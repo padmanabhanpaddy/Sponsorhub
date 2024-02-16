@@ -1,11 +1,18 @@
-.LandingBlocksBlurRoot{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width:30%;
+.LandingBlocksBlurRoot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  background-color: rgba(190, 190, 190, 0.308);
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 5px 17px 2px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: 3px 5px 17px 2px rgba(0, 0, 0, 0.32);
+  box-shadow: 3px 5px 17px 2px rgba(0, 0, 0, 0.32);
+  margin-bottom: 50px;
 }
 
-.LandingBlocksBlurLogo > img{
-    width:15%;
+.LandingBlocksBlurLogo > img {
+  width: 15%;
 }

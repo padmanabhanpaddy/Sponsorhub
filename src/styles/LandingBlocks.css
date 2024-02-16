@@ -1,17 +1,23 @@
 .LandingBlockRoot{
     display:flex;
     flex-direction: row;
-    width:70%; 
-    margin-top:10px;
-    margin-bottom:10px;
+    justify-content: space-between;
+    margin-bottom:50px;
+    max-width: 1200px;
 }
 
 .LandingBlockLeft{
-    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
 }
 
 .LandingBlockRight{
-    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
 }
 
 .LandingBlockLeftBox{
