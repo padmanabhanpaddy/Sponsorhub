@@ -11,6 +11,10 @@ import EventPostPage from './pages/EventPostPage';
 import UserEventListingPage from './pages/UserEventListingPage';
 import EventSponsorListingPage from './pages/EventSponsorListingPage';
 import SponsorEventListingPage from './pages/SponsorEventListingPage';
+import ChatPage from './pages/ChatPage';
+import ChatListingPage from './pages/ChatListingPage';
+
+
 
 function App() {
   return (
@@ -38,6 +42,9 @@ function App() {
           <Route path="/user_events" element={<UserEventListingPage/>}/>
           <Route path="/user_events/:id" element={<EventSponsorListingPage/>}/>
 
+          <Route path='/chats/:userId?/:sponsorId?' element={<ChatPage />}/>
+          <Route path='/all_user_chat' element={<ChatListingPage />} />
+          <Route path='/all_sponsor_chat' element={<ChatListingPage />} />
 
         </Routes>
       </BrowserRouter>

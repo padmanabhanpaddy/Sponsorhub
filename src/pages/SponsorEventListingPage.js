@@ -34,8 +34,8 @@ export default function SponsorEventListingPage() {
       {/* Render PayForEventCard and PaymentPortalButton for each event */}
       {sponsorshipData.map((sponsorship) => (
 
-            !sponsorship.sponsor_paid_amount &&
-            <div key={sponsorship.id_x}>
+           
+            !sponsorship.sponsor_paid_amount && <div key={sponsorship.id_x}>
             <PayForEventCard
                 id={sponsorship.id_x}
                 name={sponsorship.name}

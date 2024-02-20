@@ -23,6 +23,7 @@ export default function ApplyForm() {
     const [planName, setPlanName] = useState();
     const [planSize, setSizeType] = useState();
     const [planPrice, setPlanPrice] = useState();
+    const [planData, setPlanData] = useState();
 
     // Get the email of the user
     const email = useSelector(state => state.users.user_email)
@@ -43,7 +44,8 @@ export default function ApplyForm() {
             "end_time": end_time,
             "description": description,
             "images": images,
-            "quotation_file": quotationfile
+            "quotation_file": quotationfile,
+            "plans": JSON.stringify(planData)
         }
 
         console.log(data);
@@ -65,6 +67,22 @@ export default function ApplyForm() {
     const createPlanHandler = () =>{
         // Increment the number of plans
         setNplans(nplans + 1);
+    }
+
+    const confirmPlanHandler = () =>{
+        // Create a plans object
+        const planDataList = []
+
+        for (let i = 0; i < nplans; i++) {
+            const planName = document.getElementById(`planName_${i}`).value;
+            const planSize = document.getElementById(`planSize_${i}`).value;
+            const planPrice = document.getElementById(`planPrice_${i}`).value;
+            planDataList.push({ planName, planSize, planPrice });
+        }
+       
+        // Set the state
+        setPlanData(planDataList);
+        console.log(planDataList)
     }
 
 
@@ -147,35 +165,35 @@ export default function ApplyForm() {
            
         {/* Render additional input fields */}
         {(() => {
-                    const fields = [];
-                    for (let i = 0; i < nplans; i++) {
-                        fields.push(
-                            // Name of the plan
-                            <table key={i}>
+            const fields = [];
+            for (let i = 0; i < nplans; i++) {
+                fields.push(
+                    // Name of the plan
+                    <table key={i}>
+                        <h2>Plan: {i + 1}</h2>
+                        <tr>
+                            <td>Plan Name: </td>
+                            <td><input type="text" id={`planName_${i}`} /></td>
+                        </tr>
+                        <tr>
+                            <td>Banner Size: </td>
+                            <td><input type="text" id={`planSize_${i}`} /></td>
+                        </tr>
+                        <tr>
+                            <td>Banner Price: </td>
+                            <td><input type="number" id={`planPrice_${i}`} /></td>
+                        </tr>
+                    </table>
+                );
+            }
+            return fields;
+        })()}
 
-                                <h2>Plan: {i+1}</h2>
-                                <tr>
-                                    <td>Plan Name: </td>
-                                    <td><input type="text" /></td>
-                                </tr>
 
-                                <tr>
-                                    <td>Banner Size: </td>
-                                    <td><input type="text" /></td>
-                                </tr>
 
-                                <tr>
-                                    <td>Banner Price: </td>
-                                    <td><input type="number" /></td>
-                                </tr>
-                                
-                            </table>
+            <button onClick={confirmPlanHandler}>Confirm Plan</button>
 
-                            
-                        );
-                    }
-                    return fields;
-                })()}
+
 
 
     </div>

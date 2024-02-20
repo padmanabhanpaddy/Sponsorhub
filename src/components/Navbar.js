@@ -60,10 +60,21 @@ export default function Navbar() {
                   <li>Post Event</li>
                 </Link>
               )}
+              {user_email && (
+                <Link className="Navoptions" to="/all_sponsor_chat">
+                  <li>Chats</li>
+                </Link>
+              )}
 
               {sponsor_email && (
                 <Link className="Navoptions" to="/sponsor_events">
                   <li>Sponsor Status</li>
+                </Link>
+              )}
+
+              {sponsor_email && (
+                <Link className="Navoptions" to="/all_user_chat">
+                  <li>Chats</li>
                 </Link>
               )}
 

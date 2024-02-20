@@ -20,10 +20,15 @@ export default function EventSponsorListingPage() {
     };
 
     
-
-    // Make a post request to get all sponsors of the event
+    try{
+      // Make a post request to get all sponsors of the event
     axios.post('http://localhost:8000/app/get_event_sponsors/', data)
-      .then(res => setSponsorshipsAppliesData(res.data));
+    .then(res => setSponsorshipsAppliesData(res.data));
+    }
+    catch{
+      setSponsorshipsAppliesData([]);
+    }
+    
 
   } , [id]);
 
@@ -39,23 +44,40 @@ export default function EventSponsorListingPage() {
 
       {/* Main div */}
       <div className='EventSponsorListingPageMain'>
-        {/* When no data, it means no appications received yet */}
-        {!sponsorshipsAppliesData.length && <p>No applications yet</p>}
-
         {/* When data exists, display the data */}
-        {sponsorshipsAppliesData.map(sponsorship => (
+        {sponsorshipsAppliesData.length ? sponsorshipsAppliesData.map(sponsorship => (
           <div key={sponsorship.id}>
-            <AcceptSponsorCard
-              id={sponsorship.id_x}
-              name={sponsorship.name}
-              type={sponsorship.type}
-              address={sponsorship.address}
-              profile_image={sponsorship.profile_image}
-              amount={sponsorship.amount}
-            />
-            <AcceptSponsorshipPaymentButton sponsorship={sponsorship} />
+            {sponsorship.user_accepted_request && !sponsorship.sponsor_paid_amount ? (
+              <>
+                <AcceptSponsorCard
+                  id={sponsorship.id_x}
+                  name={sponsorship.name}
+                  type={sponsorship.type}
+                  address={sponsorship.address}
+                  profile_image={sponsorship.profile_image}
+                  amount={sponsorship.amount}
+                />
+                <p>Request Accepted, Wait For Sponsor to pay</p>
+              </>
+            ) : (
+              <div>
+                <AcceptSponsorCard
+                  id={sponsorship.id_x}
+                  name={sponsorship.name}
+                  type={sponsorship.type}
+                  address={sponsorship.address}
+                  profile_image={sponsorship.profile_image}
+                  amount={sponsorship.amount}
+                />
+                {sponsorship.sponsor_paid_amount ? (
+                  <p>Sponsor Has Paid</p>
+                ) : (
+                  <AcceptSponsorshipPaymentButton sponsorship={sponsorship} />
+                )}
+              </div>
+            )}
           </div>
-        ))}
+        )) : <p>No applications yet</p>}
       </div>
     </div>
   );

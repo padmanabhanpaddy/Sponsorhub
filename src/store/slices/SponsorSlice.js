@@ -15,11 +15,14 @@ const sponsorSlice = createSlice({
         addSponsor(state, action) {
             state.sponsor_email = action.payload;
         },
+        addSponsorId(state, action) {
+            state.sponsorId = action.payload;
+        },
         clearSponsor(state){
             state.sponsor_email = false
         },
     },
 });
 
-export const {addSponsor, clearSponsor} = sponsorSlice.actions;
+export const {addSponsor, clearSponsor, addSponsorId} = sponsorSlice.actions;
 export default sponsorSlice.reducer;

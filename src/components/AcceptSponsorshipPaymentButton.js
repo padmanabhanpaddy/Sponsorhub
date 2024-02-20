@@ -8,10 +8,10 @@ export default function AcceptSponsorshipPaymentButton(props) {
     const handleAcceptSponsor = async() =>{
         // Data to send
         const data = {
-            "sponsorship_id": props.sponsorship.id
+            "sponsorship_id": props.sponsorship.id_x
         }
 
-        console.log(data)
+        console.log(props)
 
         // Send a post request
         axios.post('http://localhost:8000/app/accept_sponsorship/', data)

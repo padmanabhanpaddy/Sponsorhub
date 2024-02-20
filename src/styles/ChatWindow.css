@@ -1,0 +1,55 @@
+.ChatWindowRoot {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #36393f;
+    color: #fff;
+  }
+  
+  .message-list {
+    flex: 1;
+    overflow-y: auto;
+    color: #fff; /* Set text color for the message list */
+  }
+  
+  /* Style the message text inside the message box */
+  .message-list .rce-mbox-text {
+    color: #000; /* Set text color for the message box */
+  }
+  
+  .InputContainer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #2f3136;
+    padding: 10px;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .InputMessage {
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+    background-color: #40444b;
+    color: #fff;
+    border: none;
+  }
+  
+  .InputMessage button {
+    background-color: #7289da;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 4px;
+  }
+  
+  .InputMessage button:hover {
+    background-color: #677bc4;
+  }
+  
+  .message-list .rce-mbox {
+    max-width: 50%; /* Adjust the max-width as per your preference */
+    margin-bottom: 8px; /* Add some bottom margin for spacing */
+  }
+  

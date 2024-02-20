@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "../styles/Signin.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { addUser } from "../store/slices/UserSlice";
-import { addSponsor } from "../store/slices/SponsorSlice";
+import { addUser, addUserId } from "../store/slices/UserSlice";
+import { addSponsor, addSponsorId } from "../store/slices/SponsorSlice";
 import { useDispatch } from "react-redux";
 import SwitchTabs from "../components/SwitchTabs";
 
@@ -33,8 +33,11 @@ export default function Signin(props) {
         // If user signin send to user state else sponsor state
         if (props.is_user) {
           dispatch(addUser(response.data.email));
+          dispatch(addUserId(response.data.userId));
+          
         } else {
           dispatch(addSponsor(response.data.email));
+          dispatch(addSponsorId(response.data.sponsorId));
           console.log("Sponsor added");
         }
 

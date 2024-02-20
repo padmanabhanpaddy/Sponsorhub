@@ -9,7 +9,8 @@ export default function SponsorFundButton(props) {
 
     // Handle applying sponsorship funding
     const handleSponsorshipFund = async() =>{
-       
+
+      try{
         // Data to send
         const data = {"sponsor_email":sponsor_email,
                       "event_id": props.event_id,
@@ -19,6 +20,12 @@ export default function SponsorFundButton(props) {
         // Post request
         axios.post("http://localhost:8000/app/apply_sponsorship/", data)
         .then(res => console.log(res));
+      }
+      catch(err){
+        console.log(err);
+      }
+       
+        
     }
 
   return (
