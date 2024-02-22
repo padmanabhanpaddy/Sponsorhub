@@ -1,0 +1,42 @@
+.ChatStatusRoot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #36393f; /* Discord theme background color */
+    padding: 10px;
+    color: #fff; /* Text color */
+  }
+  
+  .back-button {
+    cursor: pointer;
+  }
+  
+  .typing-status {
+    display: flex;
+    align-items: center;
+  }
+  
+  .typing-animation {
+    display: flex;
+  }
+  
+  .typing-animation div {
+    background-color: #fff; /* Color of typing animation dots */
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+    margin: 0 2px; /* Adjust the margin for spacing between dots */
+    animation: typingDot 0.6s infinite alternate;
+  }
+  
+  @keyframes typingDot {
+    0% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(-5px);
+    }
+  }
+  

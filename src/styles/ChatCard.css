@@ -1,0 +1,45 @@
+.EventCardRoot {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    background-color: #b7b7b7a7;
+    -webkit-box-shadow: 1px 2px 37px 8px #e1e1e1;
+    -moz-box-shadow: 1px 2px 37px 8px #e1e1e1;
+    box-shadow: 1px 2px 37px 8px #e1e1e1;
+  }
+  .EventCardRoot:hover {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    color: black;
+    background-color: #1da1f2;
+    -webkit-box-shadow: 1px 2px 37px 8px #1da1f2;
+    -moz-box-shadow: 1px 2px 37px 8px #1da1f2;
+    box-shadow: 1px 2px 37px 8px #1da1f2;
+    transition: ease-in 0.15s;
+  }
+  .EventCardRoot p {
+    text-align: left;
+    margin: 5px;
+    padding: 0;
+  }
+  .EventCardPoster {
+    width: 300px;
+  }
+  
+  .EventCardPoster > img {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .EventCardDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 2px;
+  }
+  

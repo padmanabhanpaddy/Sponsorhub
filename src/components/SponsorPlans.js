@@ -8,6 +8,7 @@ export default function SponsorPlans(props) {
     const [plans, setPlans] = useState([]);
 
     useEffect(() => {
+        console.log(props);
         if (typeof props.data.plans === 'string') {
            
             const decodedPlansString = decodeURIComponent(props.data.plans);    
@@ -16,6 +17,7 @@ export default function SponsorPlans(props) {
             console.log("Decoded Plans:", decodedPlans);
 
             setPlans(decodedPlans);
+            console.log(decodedPlans)
            
             
         }

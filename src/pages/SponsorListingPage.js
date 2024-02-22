@@ -4,13 +4,15 @@ import SponsorCard from '../components/SponsorCard'
 import SearchBar from '../components/SearchBar'
 import "../styles/SponsorListingPage.css";
 import axios from 'axios';
-
-
+import { Link } from 'react-router-dom';
+import {useSelector} from 'react-redux'
 
 export default function SponsorListingPage() {
   
  // Creating state to store response
  const [sponsorData, setSponsorData] = useState([]) 
+
+ const userId = useSelector(state => state.users.userId)
 
 
   // Get all the sponsors
@@ -53,17 +55,19 @@ export default function SponsorListingPage() {
               <div className="SponsorListingCardBox">
                 {/* Listing all the events */}
                 {sponsorData.map(sponsor => (
-                  <SponsorCard
-                    key={sponsor.id}
-                    address={sponsor.address}
-                    contact={sponsor.contact}
-                    email={sponsor.email}
-                    id={sponsor.id}
-                    name={sponsor.name}
-                    password={sponsor.password}
-                    profile_image={sponsor.profile_image}
-                    type={sponsor.type}
-                  />
+                  <Link to={`/chats/${userId}/${sponsor.id}`}>
+                    <SponsorCard
+                      key={sponsor.id}
+                      address={sponsor.address}
+                      contact={sponsor.contact}
+                      email={sponsor.email}
+                      id={sponsor.id}
+                      name={sponsor.name}
+                      password={sponsor.password}
+                      profile_image={sponsor.profile_image}
+                      type={sponsor.type}
+                    />
+                  </Link>
                 ))}
 
               </div>
