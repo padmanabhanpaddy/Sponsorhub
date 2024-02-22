@@ -44,7 +44,7 @@ export default function SigninPage(props) {
             navigate("/sponsor_signin");
           }}
           userActivity={"User Sign in"}
-          sponsorActivity={"User Sign in"}
+          sponsorActivity={"Sponsor Sign in"}
         />
       </div>
 
