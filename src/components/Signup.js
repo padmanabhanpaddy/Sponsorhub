@@ -66,7 +66,13 @@ export default function Signup(props) {
   return (
     <>
       <div className="outer-container">
-        <div className="signin">Signup</div>
+        <div className="signin">
+          Register as a&nbsp;
+          <p className="dynamicTextSignin">
+          {props.is_user === true
+            ? "Organizer!"
+            : "Sponsor!"}</p>
+        </div>
         <div className="emaildes">
           <div className="email">Email *</div>
           {/* Signin Input */}

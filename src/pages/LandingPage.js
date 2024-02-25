@@ -1,9 +1,10 @@
 import React from "react";
 import LandingBanner from "../components/LandingBanner";
 import LandingBlocks from "../components/LandingBlocks";
-import LandingBlocksBlur from "../components/LandingBlocksBlur";
 import Navbar from "../components/Navbar";
 import "../styles/LandingPage.css";
+import LandingBlocks2 from "../components/LandingBlocks2";
+import Footer from "../components/Footer";
 
 export default function LandingPage() {
   return (
@@ -15,8 +16,11 @@ export default function LandingPage() {
       <div className="LandingBlocksBox">
         <LandingBlocks></LandingBlocks>
       </div>
+      <div className="LandingBlocksBox">
+        <LandingBlocks2 />
+      </div>
 
-      <div className="LandingBlocksBlurBox">
+      {/* <div className="LandingBlocksBlurBox">
         <LandingBlocksBlur
           cardTitle="Explore Events"
           cardDescription="Explore Some magnificient event!!!"
@@ -25,7 +29,8 @@ export default function LandingPage() {
           cardTitle="Explore Sponsors"
           cardDescription="See some gigantic Sponsors ready to help and uplift your events"
         />
-      </div>
+      </div> */}
+      <Footer/>
     </div>
   );
 }

@@ -42,13 +42,10 @@
   #sign:hover {
     width: 179px;
     height: 42px;
-    background: #1da1f2;
+    background: #00baf2;
     color: #000;
     cursor: pointer;
     border: 0;
     font-weight: 600;
-    -webkit-box-shadow: 1px 2px 37px 8px #1da1f2;
-    -moz-box-shadow: 1px 2px 37px 8px #1da1f2;
-    box-shadow: 1px 2px 37px 8px #1da1f2;
-    transition: ease-in 0.15s;
+    transition: ease-in 0.2s;
   }
