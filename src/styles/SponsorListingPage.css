@@ -13,11 +13,16 @@
 
 .SponsorListingCardBox{
     display:flex;
-    justify-content: flex-start;
     flex-direction:row;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%
 }
 
 .SponsorListingCardBox > div{
     margin:10px;
+}
+.sponsorCardLink{
+    text-decoration: none;
+    color: black;
 }

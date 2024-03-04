@@ -25,7 +25,6 @@ function App() {
 
 
           <Route path="/events" element={<EventListingPage/>}/>
-          <Route path="/eventMain" element={<EventMainPage/>}/>
           <Route path="/event_post" element={<EventPostPage is_user={false} />}/>
           <Route path="/events/:id/:name/:type/:address/:min_audience/:max_audience/:start_date/:end_date/:start_time/:end_time/:description/:images?/:plans?" element={<EventMainPage/>}/>
 

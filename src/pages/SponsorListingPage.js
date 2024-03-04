@@ -55,7 +55,7 @@ export default function SponsorListingPage() {
               <div className="SponsorListingCardBox">
                 {/* Listing all the events */}
                 {sponsorData.map(sponsor => (
-                  <Link to={`/chats/${userId}/${sponsor.id}`}>
+                  <Link to={`/chats/${userId}/${sponsor.id}`} className='sponsorCardLink'>
                     <SponsorCard
                       key={sponsor.id}
                       address={sponsor.address}
