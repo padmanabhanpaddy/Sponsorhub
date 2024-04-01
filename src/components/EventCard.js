@@ -1,14 +1,14 @@
 import React from "react";
-import event_card_image from "../assets/event-card-image.avif";
+import eventimage from "../assets/event image.jpg";
 import "../styles/EventCard.css";
 
 export default function EventCard(props) {
   return (
-    <div className="EventCardRoot">
+    <div className="EventCardMainDiv">
       {/* Upper Big Div For Poster */}
       <div className="EventCardPoster">
         {/* <img src={props.images.length > 0 ? props.images[0].image : ''}  /> */}
-        <img src={props.images ? props.images[0].image : ""} />
+        <img src={props.images ? props.images[0].image : { eventimage }} />
       </div>
 
       {/* Lower Medium Div For Text Detials */}
@@ -16,25 +16,25 @@ export default function EventCard(props) {
         {/* Include title, audience-size, type, location */}
 
         <div className="EventcardDetailsBlock">
-          <p>
+          <p className="InfoText">
             <b>Event Name:</b> {props.name}
           </p>
         </div>
 
         <div className="EventcardDetailsAudienceBlock">
-          <p>
+          <p className="InfoText">
             <b>Audience Footfall:</b> {props.max_audience}
           </p>
         </div>
 
         <div className="EventcardDetailsTypeBlock">
-          <p>
+          <p className="InfoText">
             <b>Event Type:</b> {props.type}
           </p>
         </div>
 
         <div className="EventcardDetailsLocationBlock">
-          <p>
+          <p className="InfoText">
             <b>Location:</b> {props.address}
           </p>
         </div>

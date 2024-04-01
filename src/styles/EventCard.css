@@ -1,4 +1,4 @@
-.EventCardRoot {
+.EventCardMainDiv {
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -6,7 +6,7 @@
   background-color: #00baf2;
   transition: all ease 0.3s;
 }
-.EventCardRoot:hover {
+.EventCardMainDiv:hover {
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -21,6 +21,9 @@
 }
 .EventCardPoster {
   width: 300px;
+}
+.InfoText {
+  margin: 10px;
 }
 
 .EventCardPoster > img {

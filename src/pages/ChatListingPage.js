@@ -40,7 +40,7 @@ export default function ChatListingPage() {
     <div className="allChatBoxes">
       {user_email && chatData.map((chat, index) => (
         <div className="chatCardBox">
-          <Link to={`/chats/${userId}/${chat.id}`}>
+          <Link className="ChatBoxLink" to={`/chats/${userId}/${chat.id}`}>
             <ChatCard data={chat} key={index}/>
           </Link>
           </div>
@@ -51,7 +51,7 @@ export default function ChatListingPage() {
 
     {!user_email && chatData.map((chat, index) => (
         <div className="chatCardBox">
-        <Link to={`/chats/${chat.id}/${sponsorId}`}>
+        <Link className="ChatBoxLink" to={`/chats/${chat.id}/${sponsorId}`}>
           <ChatCard data={chat} key={index}/>
         </Link>
         </div>
