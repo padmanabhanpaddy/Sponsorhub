@@ -5,11 +5,20 @@ import '../styles/ChatWindow.css';
 import { useSelector } from 'react-redux';
 import {useParams} from 'react-router-dom'
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar"
+
 
 export default function ChatWindow(props) {
 
+  // For Navigation
+  const navigate = useNavigate();
+
   // Get the user email from the global state
   const user_email = useSelector(state => state.users.user_email);
+  const sponsor_email = useSelector(state => state.sponsors.sponsor_email);
+  const userID = useSelector(state => state.users.userId);
+  const sponsorID = useSelector(state => state.sponsors.sponsorId);
 
   // Get the user_id and sponsorId from the url
   const {userId, sponsorId} = useParams();
@@ -17,6 +26,19 @@ export default function ChatWindow(props) {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
   const [socket, setSocket] = useState(null);
+
+  // If user or sponsor is logged in only then show else take him/her to signin page
+  // Must have user/sponsr email in state and their Ids should match the Url ids
+  useEffect(() => {
+    if((user_email || sponsor_email) &&
+       ((sponsorId == sponsorID) || (userId == userID))){
+      console.log("Someone is logged!");
+      console.log((sponsorId == sponsorID) || (userId == userID));
+    }
+    else{
+      navigate("/user_signin");
+    }
+  }, [user_email, sponsor_email])
 
 
   // Loads the messages from the database and displays on screen
@@ -142,6 +164,9 @@ export default function ChatWindow(props) {
 
   return (
     <div className='ChatWindowRoot'>
+
+      <Navbar></Navbar>
+
       <div className='message-list'>
         <MessageList
           lockable={true}
@@ -164,6 +189,7 @@ export default function ChatWindow(props) {
         />
       </div>
     </div>
+
   );
 
 }
