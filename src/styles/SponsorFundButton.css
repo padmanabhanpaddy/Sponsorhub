@@ -1,0 +1,7 @@
+.planSelectioButton{
+  background-color: #00baf2;
+  transition: all ease 0.3s;
+  &:hover{
+    background-color: #01a5d7;
+  }
+}

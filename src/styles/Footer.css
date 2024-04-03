@@ -1,0 +1,29 @@
+.mainFooterBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  background-color: #ffffff;
+}
+
+.brandImage{
+    img{
+        width: 500px;
+    }    
+}
+.infoAbout{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.socialMediaLinks{
+    margin-bottom: 20px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.copyRights{
+    width: 100%;
+    height: 20px;
+    margin-bottom: 10px;
+}

@@ -38,8 +38,8 @@ export default function SignupPage(props) {
           sponsorSignin={() => {
             navigate("/sponsor_signup");
           }}
-          userActivity={"User Sign Up"}
-          sponsorActivity={"Sponsor Sign Up"}/>
+          userActivity={"I'm a Event Organizer"}
+          sponsorActivity={"I'm a Event Sponsor"}/>
       </div>
       <Signup is_user={props.is_user}></Signup>:
     </div>

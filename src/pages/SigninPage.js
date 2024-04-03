@@ -43,8 +43,8 @@ export default function SigninPage(props) {
           sponsorSignin={() => {
             navigate("/sponsor_signin");
           }}
-          userActivity={"User Sign in"}
-          sponsorActivity={"User Sign in"}
+          userActivity={"I'm a Event Organizer"}
+          sponsorActivity={"I'm a Event Sponsor"}
         />
       </div>
 

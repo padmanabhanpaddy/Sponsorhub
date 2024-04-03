@@ -58,7 +58,7 @@ export default function Signin(props) {
           Welcome back&nbsp;
           <p className="dynamicTextSignin">
           {props.is_user === true
-            ? "User!"
+            ? "Organizer!"
             : "Sponsor!"}</p>
         </div>
         <div className="emaildes">

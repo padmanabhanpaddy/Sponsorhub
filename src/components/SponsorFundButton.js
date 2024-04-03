@@ -30,7 +30,7 @@ export default function SponsorFundButton(props) {
 
   return (
     <div>
-        <input type='submit' value='Fund Event' onClick={handleSponsorshipFund} ></input>
+        <input className='planSelectioButton' type='submit' value='Fund Event' onClick={handleSponsorshipFund} ></input>
     </div>
   )
 }

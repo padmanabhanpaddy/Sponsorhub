@@ -13,7 +13,7 @@ import EventSponsorListingPage from './pages/EventSponsorListingPage';
 import SponsorEventListingPage from './pages/SponsorEventListingPage';
 import ChatPage from './pages/ChatPage';
 import ChatListingPage from './pages/ChatListingPage';
-
+import SponsorshipCollectionDashboard from './pages/SponsorshipCollectionDashboard';
 
 
 function App() {
@@ -25,7 +25,6 @@ function App() {
 
 
           <Route path="/events" element={<EventListingPage/>}/>
-          <Route path="/eventMain" element={<EventMainPage/>}/>
           <Route path="/event_post" element={<EventPostPage is_user={false} />}/>
           <Route path="/events/:id/:name/:type/:address/:min_audience/:max_audience/:start_date/:end_date/:start_time/:end_time/:description/:images?/:plans?" element={<EventMainPage/>}/>
 
@@ -41,6 +40,7 @@ function App() {
           <Route path="/user_signup" element={<SignupPage is_user={true} />}/>
           <Route path="/user_events" element={<UserEventListingPage/>}/>
           <Route path="/user_events/:id" element={<EventSponsorListingPage/>}/>
+          <Route path="/user_events/:id/dashboard" element={<SponsorshipCollectionDashboard/>}/>
 
           <Route path='/chats/:userId?/:sponsorId?' element={<ChatPage />}/>
           <Route path='/all_user_chat' element={<ChatListingPage />} />

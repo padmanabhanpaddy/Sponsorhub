@@ -12,7 +12,6 @@ export default function Navbar() {
   const user_email = useSelector((state) => state.users.user_email);
   const sponsor_email = useSelector((state) => state.sponsors.sponsor_email);
 
-  console.log({ user_email, sponsor_email });
   // A dispatcher to dispatch an event to the redux global state
   const dispatch = useDispatch();
 

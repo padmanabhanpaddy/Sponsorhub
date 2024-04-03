@@ -5,6 +5,14 @@ import axios from 'axios';
 import '../styles/EventSponsorListingPage.css';
 import AcceptSponsorshipPaymentButton from '../components/AcceptSponsorshipPaymentButton';
 import AcceptSponsorCard from '../components/AcceptSponsorCard';
+import { Link } from 'react-router-dom';
+
+
+
+
+
+
+
 
 export default function EventSponsorListingPage() {
   // Get the event id
@@ -79,6 +87,19 @@ export default function EventSponsorListingPage() {
           </div>
         )) : <p>No applications yet</p>}
       </div>
+
+
+        {/* A button to show stats */}
+        <Link to={`dashboard`}>
+          <div className='EventCollectionContainer'>
+            <button>Show Event Collection Details</button>
+          </div>
+        </Link>
+        
+
+
+
+
     </div>
   );
 }
