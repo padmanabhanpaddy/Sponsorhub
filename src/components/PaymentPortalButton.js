@@ -48,7 +48,7 @@ export default function PaymentPortalButton(props) {
   return (
             <div className="PaymentPortalButtonRoot">
                 {/* Holds the Pay button */}
-                <input type="submit" value="Pay for event" onClick={() => PaymentGateway(paymentInfo)}></input>
+                <input className="AcceptSponsorshipPaymentButtonRoot" type="submit" value="Pay for event" onClick={() => PaymentGateway(paymentInfo)}></input>
 
             </div>
   )

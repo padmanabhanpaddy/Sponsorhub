@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+/* Dashboard CSS written here */
+.MainDashboardInterface{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

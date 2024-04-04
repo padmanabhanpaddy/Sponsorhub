@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function PayForEventCard(props) {
   return (
-    <div className='EventCardRoot'>
+    <div className='EventAcceptSponsorRoot'>
     {/* Upper Big Div For Poster */}
     <div className='EventCardPoster'>
     {/* <img src={props.images.length > 0 ? props.images[0].image : ''}  /> */}

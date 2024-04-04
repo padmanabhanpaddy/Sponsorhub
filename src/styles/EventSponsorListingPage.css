@@ -1,0 +1,26 @@
+.EventSponsorListingPageMain{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+
+.SponsorStatusText{
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.AcceptSponsorshipPaymentButtonRoot{
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.EventCollectionContainer{
+    width: 350px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 18px;
+}

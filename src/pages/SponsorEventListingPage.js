@@ -28,8 +28,9 @@ export default function SponsorEventListingPage() {
   }, [sponsorshipData]);
 
   return (
-    <div className='SponsorEventListingPageRoot'>
-      <Navbar />
+    <>
+    <Navbar />
+    <div className='EventSponsorListingPageMain'>
 
       {/* Render PayForEventCard and PaymentPortalButton for each event */}
       {sponsorshipData.map((sponsorship) => (
@@ -57,5 +58,6 @@ export default function SponsorEventListingPage() {
 
       ))}
     </div>
+    </>
   );
 }

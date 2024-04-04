@@ -41,7 +41,7 @@ export default function UserEventListingPage() {
         <div className='UserEventListingPageMain'>
 
           {userEvents.map(event =>(
-              <Link to={`/user_events/${event.id}`}>
+              <Link className='EventStatusLink' to={`/user_events/${event.id}`}>
                 <EventCard
                   id={event.id}
                   key={event.id}

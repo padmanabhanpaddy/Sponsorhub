@@ -3,3 +3,7 @@
     flex-direction: flex-start;
     justify-content: space-evenly;
 }
+.EventStatusLink{
+    color: black;
+    text-decoration: none;
+}
