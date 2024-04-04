@@ -1,6 +1,7 @@
 import React from "react";
 import eventimage from "../assets/event image.jpg";
 import "../styles/EventCard.css";
+import { MdDelete } from "react-icons/md";
 
 export default function EventCard(props) {
   return (
@@ -37,6 +38,9 @@ export default function EventCard(props) {
           <p className="InfoText">
             <b>Location:</b> {props.address}
           </p>
+        </div>
+        <div >
+          <MdDelete className="DeleteButton" />
         </div>
       </div>
     </div>
